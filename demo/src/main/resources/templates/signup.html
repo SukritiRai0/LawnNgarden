@@ -1,0 +1,102 @@
+
+<!DOCTYPE html>
+<html>
+    <head th:replace="_fragments :: header('Signup')">
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Sign up</title>
+    </head>
+
+<body>
+
+    <div class="m-container-samll m-padded-tb-large">
+        <div class="ui container" style="max-width: 35em !important;">
+            <div class="ui middle aligned center aligned grid">
+                <div class="column">
+                  <h2 class="ui teal image header">
+                    <div class="content">
+                      Create New Account
+                    </div>
+                  </h2>
+                  <form class="ui large form" id="signupForm" method="POST" th:action="@{/signup}">
+                    <div class="ui stacked segment"> 
+                        <div class="ui left labeled"> 
+                            <label>Name</label>
+                                <div class="two fields">
+                                    <div class="field">
+                                        <input type="text" name="firstName" placeholder="FirstName">
+                                    </div>
+                                        
+                                    <div class="field">
+                                        <input type="text" name="lastName" placeholder="LastName">
+                                    </div>
+                                </div>
+                            </div>
+                       
+                        
+
+                        <div class="field">
+                        <div class="ui left icon input">
+                            <input type="text" name="email" placeholder="Email">
+                        </div>
+                        </div>
+
+                        <div class="field">
+                        <div class="ui left icon input">
+                            <input type="password" name="passWord" placeholder="Password">
+                        </div>
+                        </div>
+
+                        <div class="field">
+                        <div class="ui left icon input">
+                            <input type="password" name="confirmPassWord" placeholder="confirmPassword">
+                        </div>
+                        </div>
+                      
+                        
+                      
+                      <button type="submit" class="ui fluid large teal submit button">Login</button>
+                    </div>
+              
+                    <div class="ui error mini message" id="errorDiv"></div>
+
+                    <div class="ui negative mini message" th:unless="${#strings.isEmpty(message)}" th:text="${message}"></div>
+              
+                  </form>
+                </div>
+              </div>
+        </div>
+    </div>
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.1/jquery.validate.min.js"></script>
+    <script>
+
+      $().ready(function(){
+        $('#signupForm').validate(
+          {
+            errorLabelContainer: $("#errorDiv"),
+            rules: {
+              firstName: "required",
+              lastName: "required",
+              email: {
+                  required: true,
+                  email: true
+              },
+              passWord: "required",
+              confirmPassWord: {
+                required: true,
+                equalTo: "#passWord"
+              }
+            }
+          }
+        );
+      })
+
+    </script>
+
+</body>
+
+</html>

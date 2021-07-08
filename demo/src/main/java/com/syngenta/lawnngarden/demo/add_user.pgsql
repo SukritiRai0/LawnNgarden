@@ -1,0 +1,1 @@
+INSERT INTO t_user (id, first_name, last_name, pass_word, email) VALUES (1, 'Jiaming', 'Li', 'e10adc3949ba59abbe56e057f20f883e', 'jiamingli9674@gmail.com');
