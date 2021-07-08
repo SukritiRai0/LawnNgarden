@@ -2,7 +2,7 @@ spring:
   datasource:
     driver-class-name: org.postgresql.Driver
     username: postgres
-    password: {{password}}
+    password: test_pswd
     url: jdbc:postgresql://3.141.172.59:5432/test_db?&useUnicode=true&characterEncoding=utf8
   jpa:
     hibernate:
@@ -12,7 +12,7 @@ spring:
 logging:
   level: 
     root: info
-    com.jiaming: debug
+    com.syngenta.lawnngarden: debug
   file:
     name: ./log/blog-pro.log
     
