@@ -14,5 +14,5 @@ logging:
     root: info
     com.syngenta.lawnngarden: debug
   file:
-    name: ./log/blog-pro.log
+    name: ./log/app-pro.log
     

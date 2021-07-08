@@ -10,9 +10,9 @@
 
 <body>
 
-    <div class="m-container-samll m-padded-tb-large">
-        <div class="ui container" style="max-width: 35em !important;">
-            <div class="ui middle aligned center aligned grid">
+    <div class="m-container-samll m-padded-tb-large" >
+        <div class="ui container" style="max-width: 35em !important;" >
+            <div class="ui middle aligned center aligned grid" >
                 <div class="column">
                   <h2 class="ui teal image header">
                     <div class="content">
@@ -39,9 +39,9 @@
                       <button type="submit" class="ui fluid large teal submit button">Login</button>
                     </div>
               
-                    <div class="ui error mini message" id="errorDiv"></div>
+                    <div class="ui info mini message" id="errorDiv"></div>
 
-                    <div class="ui negative mini message" th:unless="${#strings.isEmpty(message)}" th:text="${message}"></div>
+                    <div class="ui info mini message" th:unless="${#strings.isEmpty(message)}" th:text="${message}"></div>
               
                   </form>
                 </div>

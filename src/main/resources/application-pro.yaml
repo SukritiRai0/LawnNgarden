@@ -12,7 +12,7 @@ logging:
   level: 
     root: warn
     com.syngenta.lawnngarden: info
-  file: log/blog-pro.log
+  file: log/app-pro.log
 
 
 server:

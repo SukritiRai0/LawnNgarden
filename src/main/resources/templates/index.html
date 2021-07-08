@@ -22,7 +22,7 @@
     <br>
     
     <div class="ui container info message m-padded-tb-massive">
-        <h1>Hello!(</h1>
+        <h1>Hello! <br> <span th:text="${session.user.lastName}"></span>, <span th:text="${session.user.firstName}"></span>!</h1>
     </div>
 
     <br>
@@ -35,8 +35,30 @@
     <br>
     <br>
     <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+
 </body>
 
 <footer th:replace="_fragments :: footer" class="ui inverted vertical segment m-padded-tb-massive"></footer>
+    
+<div th:replace="_fragments :: scripts"></div>
 
+<script>
+    $('.menu.toggle').click(function(){
+        $('.m-item').toggleClass('m-mobile-hide')
+    });
+
+    $('.ui.dropdown').dropdown({
+        on : 'hover'
+    });
+</script>
 </html>

@@ -8,7 +8,7 @@
         <title>Sign up</title>
     </head>
 
-<body>
+<body background="../static/images/triangle-mosaic.png">
 
     <div class="m-container-samll m-padded-tb-large">
         <div class="ui container" style="max-width: 35em !important;">
@@ -37,26 +37,29 @@
                         
 
                         <div class="field">
-                        <div class="ui left icon input">
+                        <div class="ui left labeled">
+                            <label>Email</label>
                             <input type="text" name="email" placeholder="Email">
                         </div>
                         </div>
 
                         <div class="field">
-                        <div class="ui left icon input">
-                            <input type="password" name="passWord" placeholder="Password">
+                        <div class="ui left labeled">
+                            <label>Password</label>
+                            <input type="password" id="passWord" name="passWord" placeholder="Password">
                         </div>
                         </div>
 
                         <div class="field">
-                        <div class="ui left icon input">
+                        <div class="ui left labeled">
+                            <label>Confirm Password</label>
                             <input type="password" name="confirmPassWord" placeholder="confirmPassword">
                         </div>
                         </div>
                       
                         
                       
-                      <button type="submit" class="ui fluid large teal submit button">Login</button>
+                      <button type="submit" class="ui fluid large teal submit button">Singup</button>
                     </div>
               
                     <div class="ui error mini message" id="errorDiv"></div>
