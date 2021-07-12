@@ -36,7 +36,7 @@ public class LoginController {
         if (user != null){
             user.setPassWord(null); // Dont put password to session
             httpSession.setAttribute("user", user);
-            return "/index";
+            return "index";
         }
         else{
             redirectAttributes.addFlashAttribute("message", "Username or Password Invilid"); // remind user
